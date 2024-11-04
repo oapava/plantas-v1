@@ -1,1 +1,40 @@
-<p>plata-list works!</p>
+<div class="container">
+    <img src="assets/images/logo-vivero-otono.png" alt="" class="w-25 mt-3">
+    <hr class="hr">
+    <img src="assets/images/banner.jpg" alt="" class="w-100">
+    
+    <hr class="hr">
+
+    <div class="row">
+        <div class="col-9">
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Nombre común</th>
+                      <th scope="col">Tipo</th>
+                      <th scope="col">Clima</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                    <tr *ngFor="let planta of plantas; let i = index">
+                        <th scope="row">{{planta.id}}</th>
+                        <td>{{planta.nombre_comun}}</td>
+                        <td>{{planta.tipo}}</td>
+                        <td>{{planta.clima}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="sumary p-8">
+        <p>Total plantas de interior: {{interior}} </p>
+        <p>Total plantas de exterior: {{exterior}}</p>
+    </div>
+
+    <footer class="text-center p-5">
+        <p><strong>Contact us: +57 3102105253 - <a [href]="'mailto:' + email"> {{email}} </a> - <a [href]="social"> {{social}} </a></strong></p>
+    </footer>
+      
+</div>

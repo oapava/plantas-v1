@@ -1,13 +1,15 @@
 import { TestBed } from '@angular/core/testing';
-
-import { PlataService } from './plata.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { PlantaService } from './plata.service';
 
 describe('PlataService', () => {
-  let service: PlataService;
+  let service: PlantaService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(PlataService);
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+    });
+    service = TestBed.inject(PlantaService);
   });
 
   it('should be created', () => {
